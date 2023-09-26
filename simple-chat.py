@@ -1,4 +1,10 @@
 import sys
+from server import Server
+from client import Client
+
+HOST = "127.0.0.1"
+PORT = 8080
+
 
 def main():
     argument = sys.argv[1] if len(sys.argv) == 2 else ''
@@ -11,10 +17,14 @@ def main():
 
 
 def execute_server():
-    pass
+    server = Server(HOST, PORT)
+    server.listen()
+
 
 def execute_client():
-    pass
+    client = Client(HOST, PORT)
+    client.connect()
+
 
 def print_usage():
     print(
