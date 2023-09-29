@@ -50,7 +50,7 @@ def execute_client(host: str):
 
 def print_usage():
     print(
-        """SimpleChat [Option]
+        """simple-chat [Option]
                 --server, -s
                 --client, -c [IP-Adress]"""
     )
